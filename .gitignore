@@ -1,0 +1,5 @@
+test_data/*.log
+.idea
+.swo
+.swp
+.code
