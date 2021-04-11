@@ -20,7 +20,7 @@ var (
 func init() {
 	flag.Int64Var(&config.MaxOffset, "max_offset", config.MaxOffset, "max offset from the end of the file for the first printing")
 	flag.Int64Var(&config.DelayMillisecond, "delay", config.DelayMillisecond, "delay between files scanning")
-	flag.StringVar(&config.LogPrefix, "log_prefix", config.LogPrefix, "just a log file prefixm stored in OS temp folder")
+	flag.StringVar(&config.LogPrefix, "log_prefix", config.LogPrefix, "just a log file prefix stored in OS temp folder")
 	flag.Var(
 		&startWith,
 		"start_with",
@@ -41,8 +41,8 @@ If there is no regular expression for the start_with[i]
 entity, any folders/files (entities) will be added to be 
 watched later. 
 
-To avoid troubles of replacing special symbols like . by
-current folder, enclose your regular expressions in quoutes, for example ".*".
+To avoid troubles of replacing special symbols like "." by
+current folder, enclose your regular expressions in quotes, for example ".*".
 
 Example:
 rectail -start_with /foo/bar -start_with foo -regexps_to_watch "[0-9]+\.log"
